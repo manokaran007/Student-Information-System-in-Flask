@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+<style>
+    input[type=number] {
+    height: 40px;
+    width: 30%;
+    margin: 8px 0;
+    
+   }
+
+</style>
+</head>
+<body>
+    <nav class="row" style="background: #042326; color: white;">
+
+        <div align="center"><h1 class=" text-center">Student Management System</h1></div>
+    </nav>
+    <div class="container">
+    <form class="text-center" action="/update" method="post" autocomplete="off">
+        <br><br><br><br>
+       <h1>Student Roll No</h1><input type="number" name="roll">
+      <br>
+      <br>
+      <br>
+       <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+      
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>save details</title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    
+
+     <style>
+         body{
+
+            background-color:white;
+             background-size: cover;
+             text-align: center;
+             font-weight: bold;
+             font-size: larger;
+             font-family: sans-serif;
+             
+         }
+         
+
+         a:link, a:visited {
+             
+             color: white;
+             padding: 14px 25px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+         }
+
+         a:hover {
+  background-color: red;
+  }
+  a:active{
+    background-color:blue;
+  }
+
+     </style>
+
+
+ </head>
+ <body>
+  <nav class="row" style="background: #042326; color: white;">
+
+    <div align="center"><h1 class=" text-center">Student Management System</h1></div>
+  </nav>
+  <br> <div > <h1>{{msg}}</h1></div><br><br>
+   <a class="btn btn-primary " href="/student_info">View Student Info</a>
+ </body>   
+ </html>  
+ 

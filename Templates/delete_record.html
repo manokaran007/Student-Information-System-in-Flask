@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>delete record</title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    
+
+  <style>
+
+   body{
+    background-color:white;
+ 
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+   font-family: sans-serif;
+  
+  }
+
+  a{
+    font-weight: 30px;
+  }
+ 
+  a:link, a:visited {
+  
+  color: white;
+ 
+  text-align: center;
+  
+  display: inline-block;
+  }
+
+  a:hover {
+  background-color: red;
+  }
+  a:active{
+    background-color:blue;
+  }
+
+  </style>
+
+ </head>
+ <body>
+  <nav class="row" style="background: #042326; color: white;">
+
+    <div align="center"><h1 class=" text-center">{{msg}}</h1></div>
+  </nav>
+ <br><br>
+ <a href="/student_info" class="btn btn-primary btn-lg " >View Student Info</a>
+ </body>
+ </html> 

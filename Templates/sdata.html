@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+
+</head>
+<body>
+    <nav class="row" style="background: #042326; color: white;">
+
+        <div align="center"><h1 class=" text-center">Student  Details</h1></div>
+      </nav>
+     <br>
+    
+     <table class="table table-responsive table-bordered border-dark " >
+    <div class="font-weight-bolder">
+     <thead >
+     <td>Roll No</td>
+     <td>Name</td>
+     <td>Email</td>
+     <td>Gender</td>
+     <td>Contact</td>
+     <td>D.O.B</td>
+     <td>Address</td>
+    
+     </thead>
+    
+     <tbody>
+    {% for row in rows %}
+     <tr>
+     <td>{{row.roll}}</td>
+     <td>{{row.name}}</td>
+     <td>{{row.email}}</td>
+     <td>{{row.gender}}</td>
+     <td>{{row.contact}}</td>
+     <td>{{row.dob}}</td>
+     <td>{{row.address}}</td>
+     </tr>
+     {% endfor %}
+     </tbody>
+    </div> 
+     </table>
+     <br>
+     <br>
+     <div class="text-center">
+     <a href="/home" class="btn btn-primary btn-lg">Go back to home page</a>
+    </div>
+    </body>
+     
+    
+</body>
+</html>

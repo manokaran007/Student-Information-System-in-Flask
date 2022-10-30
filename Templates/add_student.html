@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Add Student</title>
+ <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+  <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+ <style>
+   body{
+    background-color:white;
+    background-size: cover;
+    text-align: center;
+   
+   }
+   td{
+    text-align: center;
+    font-size:18px;
+   }
+   input[type=number] {
+    width: 70%;
+    margin: 8px 0;
+    box-sizing: border-box;
+   }
+  
+  
+   input[type=text] {
+    width: 70%;
+    margin: 8px 0;
+    box-sizing: border-box;
+   }
+
+   input[type=email] {
+    width: 70%;
+    margin: 8px 0;
+    box-sizing: border-box;
+   }
+
+   input[type=submit] {
+
+    
+   
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+   }
+
+   input[type=submit]:hover {
+    background-color:#45C4B0;
+   }
+   
+ 
+   input[type=submit]:active{
+  background-color:blue;
+  }
+  </style>
+ </head>
+ <body>
+  <nav class="row" style="background: #042326; color: white;">
+
+    <div align="center"><h1 class=" text-center">Student Information</h1></div>
+  </nav>
+  <div class="container">
+ 
+ <br><br>
+ 
+ <form action = "/saverecord" method="post" autocomplete="off">
+ <div >
+ <table  class="table table-responsive table-bordered table-condensed table-hover  "  >
+  
+  <tbody class="text-center">
+  <tr><td>Roll No</td><td><input type="number" name="roll" placeholder="Enter Roll No:7311201040XX" ></td></tr>
+  <tr><td>Name</td><td><input type="text" name="name" placeholder="Enter Your Name" ></td></tr>
+  <tr><td>Email</td><td><input type="email" name="email" placeholder="Enter Your Email"></td></tr>
+ <!--For Gender-->
+ <tr><fieldset>
+  <td>Gender</td>
+  <td>
+  <select name="gender" id="gender" >
+    <option>Female</option>
+    <option>Male</option>
+    <option>Other</option>
+    
+  </select>
+</td>
+</fieldset>
+</tr>
+<tr><td>Contact No.</td><td><input type="text" name="contact" placeholder="Enter Your Mobile No"></td></tr>
+ <!--For DOB-->
+ <tr><td>D.O.B</td><td><input id="datepicker" type="text" name="dob" placeholder="Enter Your D.O.B"></td></tr>
+ <tr><td>Address</td><td>,<input type="text" name="address" placeholder="Enter Your Address"></td></tr>
+  <tr><td></td><td><input class=" btn btn-lg btn-primary" type="submit" value="Submit"></td></tr>
+</tbody>
+ </table>
+</div>
+ </form>
+
+</div> 
+</body>
+ </html>  
+ <script>
+  $( function() {
+    
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  
+ 
+ 
+    $( "#gender" ).selectmenu();
+ 
+  } );
+  
+  </script>
+

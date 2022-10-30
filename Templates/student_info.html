@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>student info</title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    
+
+ <style>
+  body{
+   
+   background-position:'center';
+  text-align: center;
+   font-family: sans-serif;
+   background-color:white;
+ }
+ a:hover {
+  background-color: red;
+  }
+  a:active{
+    background-color:blue;
+  }
+
+ </style>
+
+ </head>
+ <body>
+  <nav class="row" style="background: #042326; color: white;">
+
+    <div align="center"><h1 class=" text-center">Student  Details</h1></div>
+  </nav>
+ <br>
+
+ <table class="table table-responsive table-bordered border-dark " >
+<div class="font-weight-bolder">
+ <thead >
+ <td>Roll No</td>
+ <td>Name</td>
+ <td>Email</td>
+ <td>Gender</td>
+ <td>Contact</td>
+ <td>D.O.B</td>
+ <td>Address</td>
+
+ </thead>
+</div>
+ {% for row in rows %}
+ <tr>
+ <td>{{row["roll"]}}</td>
+ <td>{{row["name"]}}</td>
+ <td>{{row["email"]}}</td>
+ <td>{{row["gender"]}}</td>
+ <td>{{row["contact"]}}</td>
+ <td>{{row["dob"]}}</td>
+ <td>{{row["address"]}}</td>
+ </tr>
+ {% endfor %}   
+ </table>
+ 
+ <a href="/home" class="btn btn-primary btn-lg">Go back to home page</a>
+ </body>
+ </html> 
+ 

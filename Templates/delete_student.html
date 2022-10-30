@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+   <title>Delete Student</title>
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+        <script src="{{url_for('static',filename='js/jquery.min.js')}}"></script>
+    
+
+ <style>
+     body{
+      background-color:white;
+    
+    text-align: center;
+    
+    
+    font-family: sans-serif;
+   
+
+   }
+   p{
+    font-size: 30px;
+   }
+
+    input[type=submit] {
+  
+    color: white;
+    
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+   }
+
+    input[type=text] {
+      height: 40px;
+    width: 30%;
+    margin: 8px 0;
+    
+   }
+
+   input[type=submit]:hover {
+    background-color: #45a049;
+   }
+
+ </style>
+
+ </head>
+ <body>
+  <nav class="row" style="background: #042326; color: white;">
+
+    <div align="center"><h1 class=" text-center">Remove Student from the list</h1></div>
+  </nav>
+  <div class="container">
+   
+ <form action="/deleterecord" method="post" autocomplete="off">
+  <br><br><br><br>
+ <p>Student Roll No</p><input type="text" name="roll">
+<br>
+ <input class="btn btn-primary btn-lg" type="submit" value="Submit">
+
+ </form>
+</div>
+ </body>
+ </html> 
